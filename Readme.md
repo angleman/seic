@@ -23,7 +23,7 @@ This is a basic module that simplifies starting projects. 99% of the servers we 
       var spdyServer = app.get('spdy');
       var socketIO = app.get('socket.io');
     });
-    
+
 
 The app object has been slightly modified:
  * The listen method has been overridden to call listen on the spdy server
