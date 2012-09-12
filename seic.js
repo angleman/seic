@@ -1,3 +1,9 @@
+/*
+** © 2012 by YOUSURE Tarifvegleich GmbH. Licensed under MIT License.
+*/
+
+module.exports = SEIC;
+
 var cluster=require('cluster');
 
 function noOp() { 
@@ -15,7 +21,7 @@ var daemon = require('./lib/daemon.js');
 var master = require('./lib/master.js');
 var worker = require('./lib/worker.js');
 
-module.exports = exports = function SEIC(options) {
+function SEIC(options) {
   var seic={};
   var callbacks = [];
   if (process.env.NODE_DAEMONIZED !== 'spdy-express-io-cluster') {
@@ -37,4 +43,14 @@ module.exports = exports = function SEIC(options) {
     }
   }
   return seic;
-};
+}
+
+function rawWorker(options, callback) {
+  var seic = {};
+  seic.daemon=noOp;
+  seic.master=noOp;
+  seic.worker=noOp;
+  process.nextTick(worker.bind(seic, options, [callback]));
+}
+
+SEIC.worker = rawWorker;

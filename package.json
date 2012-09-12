@@ -1,14 +1,22 @@
 {
-  "name":"seic",
-  "version":"0.1.2",
-  "description":"A basic setup module for an Express Server with SPDY and Socket.IO support that is clustered",
-  "main":"seic.js",
-  "bugs":{ "url":"https://github.com/phidelta/seic/issues" },
-  "author":{ "name":"Philipp Dunkel", "email":"p.dunkel@durchblicker.at" },
-  "repository":{ "type":"git", "url":"https://github.com/phidelta/seic.git" },
-  "dependencies":{
-    "spdy":">=1.3.1",
-    "express":">=3.0",
-    "socket.io":">=0.9.8"
+  "name": "seic",
+  "version": "0.1.3",
+  "description": "A basic setup module for an Express Server with SPDY and Socket.IO support that is clustered",
+  "main": "seic.js",
+  "bugs": {
+    "url": "https://github.com/phidelta/seic/issues"
+  },
+  "author": {
+    "name": "Philipp Dunkel",
+    "email": "p.dunkel@durchblicker.at"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phidelta/seic.git"
+  },
+  "dependencies": {
+    "spdy": ">=1.3.1",
+    "express": ">=3.0",
+    "socket.io": ">=0.9.8"
   }
 }
