@@ -1,6 +1,6 @@
 {
   "name": "seic",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A basic setup module for an Express Server with SPDY and Socket.IO support that is clustered",
   "main": "seic.js",
   "bugs": {

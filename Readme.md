@@ -8,6 +8,8 @@ This is a basic module that simplifies starting projects. 99% of the servers we 
       stdout:'stderr.log',
       stderr:'stdout.log',
       pidfile:'seic.pid',
+      noSPDY:false, // If true disables SPDY (default: false)
+      noSIO:false, // If true disables Socket.IO (default: false)
       ssl:{
         key:require('fs').readFileSync('my-server.key'),
         cert:require('fs').readFileSync('my-server.crt')
@@ -28,7 +30,7 @@ This is a basic module that simplifies starting projects. 99% of the servers we 
 The app object has been slightly modified:
  * The listen method has been overridden to call listen on the spdy server
  * There is a broadcast(eventname[, args...]) method which broadcasts event to all app objects in all worker processes
- * The spdy server has been set with app.set('spdy')
+ * The spdy/https server has been set with app.set('server')
  * The socket.io has been set with app.set('socket.io')
  * The used express module has been set with app.set('express')
 
